@@ -20,14 +20,6 @@ Rewrite of mariadb module; simplify needed configuration to use the mariadb modu
 
 Start mariadb from docker: `docker run --name mariadb -e MYSQL_USER=ota MYSQL_PASSWORD=ota MYSQL_DATABASE=electrode_ota -p 3306:3306 -d mariadb`
 
-Start cassandra from local:
-
-```
-curl https://archive.apache.org/dist/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz | tar -xvzf -
-cd cassandra-3.9
-./bin/cassandra
-```
-
 ```json
         "electrode-ota-server-dao-plugin" : {
             "module" : "electrode-ota-server-dao-mariadb",
