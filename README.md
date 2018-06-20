@@ -6,7 +6,7 @@ is API compatible with [code-push-cli](https://microsoft.github.io/code-push/doc
 
 ## Requirements
 
-- Node ^6.6.0
+*   Node ^6.6.0
 
 ## Upgrade
 
@@ -17,6 +17,16 @@ Various bug fixes.
 ### Version 4.0.0
 
 Rewrite of mariadb module; simplify needed configuration to use the mariadb module.
+
+Start mariadb from docker: `docker run --name mariadb -e MYSQL_USER=ota MYSQL_PASSWORD=ota MYSQL_DATABASE=electrode_ota -p 3306:3306 -d mariadb`
+
+Start cassandra from local:
+
+```
+curl https://archive.apache.org/dist/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz | tar -xvzf -
+cd cassandra-3.9
+./bin/cassandra
+```
 
 ```json
         "electrode-ota-server-dao-plugin" : {
